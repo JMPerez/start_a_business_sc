@@ -28,6 +28,7 @@ app.get('/', function (req, resp) {
         products : products,
         general_info : general_info
     };
+    console.log('User-Agent ' + req.get('User-Agent') + ' requested /'); 
     resp.render('index', data);
 })
 
@@ -39,6 +40,7 @@ app.get('/:id', function (req, resp) {
         product : products[req.params.id],
         general_info : general_info
     };
+    console.log('User-Agent ' + req.get('User-Agent') + ' requested ' + req.params.id);
     resp.render('product-detail', data);
 })
 
