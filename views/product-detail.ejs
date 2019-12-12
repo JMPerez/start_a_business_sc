@@ -172,12 +172,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '<%= general_info.pixel_id %>');
-        fbq('track', 'ViewContent', {
-            content_ids: ['<%= product.id %>'],
-            content_type: 'product',
-            value: '<%= product.price %>'.substring(0,3),
-            currency: 'USD'
-        });
     </script>
     <% if(general_info.ga) {%>
         <!-- Global site tag (gtag.js) - Google Analytics -->
